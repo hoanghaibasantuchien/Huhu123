@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Menu FF Antiband</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    /* Video nền */
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+      pointer-events: none; /* Ngăn nút play và click */
+    }
+
+    .menu-container {
+      width: 40vw;
+      aspect-ratio: 16 / 9;
+      background: rgba(0, 0, 0, 0.4);
+      border-radius: 20px;
+      color: white;
+      padding: 20px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(5px);
+    }
+
+    .menu-title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .menu-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 10px 0;
+      flex-grow: 1;
+      justify-content: center;
+    }
+
+    .option {
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .option input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border: 2px solid white;
+      border-radius: 4px;
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .option input[type="checkbox"]:checked::after {
+      content: "✓";
+      color: #00aaff;
+      font-size: 14px;
+      position: absolute;
+      top: -2px;
+      left: 3px;
+    }
+
+    .menu-footer {
+      text-align: center;
+      font-size: 14px;
+      color: #ccc;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Video nền toàn màn hình và ẩn nút play -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://files.catbox.moe/7i23ij.mp4" type="video/mp4">
+    Trình duyệt của bạn không hỗ trợ video nền.
+  </video>
+
+  <!-- Menu chính -->
+  <div class="menu-container">
+    <div class="menu-title">Menu FF Antiband</div>
+
+    <div class="menu-options">
+      <label class="option">
+        <input type="checkbox"> Aimhead💀
+      </label>
+      <label class="option">
+        <input type="checkbox"> Norecoil🎯
+      </label>
+      <label class="option">
+        <input type="checkbox"> Ping
+      </label>
+      <label class="option">
+        <input type="checkbox"> Sensitivity📱
+      </label>
+    </div>
+
+    <div class="menu-footer">Menu By Bùi Hoàng Hải</div>
+  </div>
+
+</body>
+</html>
